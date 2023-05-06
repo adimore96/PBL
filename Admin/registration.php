@@ -28,6 +28,24 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
       $status = true;
+
+      // Create Database Code Here
+      $table_name = $mobNo;
+      $query = "SHOW TABLES LIKE '".$table_name ."'";
+      $result = mysqli_query($conn, $query);
+      if($result->num_rows == 1){
+          echo "Table  Exists";
+      }
+      else{
+          echo "Table not exists";
+          $tbName =  $mobNo;
+  
+          $table1 = "CREATE TABLE `$table_name` (sno INT(250) UNSIGNED AUTO_INCREMENT PRIMARY KEY , medName VARCHAR(200), images VARCHAR(250), descriptions VARCHAR(250), category VARCHAR(250), price VARCHAR(250))";
+          $result1 = mysqli_query($conn,$table1);
+          echo "Table Created Successfully...";
+      }
+      //DB code ends here
+
     } else {
       echo "Registreation Can't Successful";
     }

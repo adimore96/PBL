@@ -7,7 +7,7 @@
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     min-height: 10vh;
     background-color: aliceblue;
     border-radius: 15px;
@@ -36,6 +36,11 @@
     display: flex;
     flex-direction: row;
 }
+.submit{
+    background: aqua;
+    border-radius: 10px;
+    width: 90px;
+}
 
 @media only screen and (max-width: 760px) {
     .container{
@@ -45,5 +50,16 @@
     }
     .container1{
         margin-bottom: 20px;
+    }
+    .form-select{
+        /* background-color: aqua; */
+        /* padding: 2px; */
+        width: 250px;
+        margin-left: 20px;
+    }
+    .row1{
+        text-align: center;
+        align-self: center !important;
+        justify-self: center !important;
     }
 }

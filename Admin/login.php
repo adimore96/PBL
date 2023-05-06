@@ -1,8 +1,12 @@
 <?php
 require "../Server/config.php";
+session_start();
+if(@$_SESSION["mobNo"]!=""){
+  header("Location: welcome.php");
+}
 
 if(isset($_POST["mobNo"])){
-  // echo "POST Requet";
+  // echo "POST Request";
   $mobNo= $_POST["mobNo"];
   $password= $_POST["password"];
   $sql = "select * from users where mobNo='$mobNo' AND password='$password' ";
