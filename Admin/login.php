@@ -58,6 +58,16 @@ $query = "select * from users where mobNo = '' and password=''";
             <li style="color: crimson;">
                <a href="../"> Home </a>
             </li>
+
+            <li>
+                <a href="develop_by.html"> Developed By </a>
+            </li>
+            <li>
+                <a href="develop_by.html"> Report Bug </a>
+            </li>
+            <li class="admin">
+                <a href="Admin/login.php"> Store_Login </a>
+            </li>
            
         </ul>
     </div>

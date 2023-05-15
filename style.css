@@ -1,13 +1,18 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body{
+body {
     background-color: slategrey;
 }
 
-.header{
+ol,
+ul {
+    padding-left: 0rem !important;
+}
+
+.header {
     background-color: rgba(3, 255, 255, 0.999);
     min-height: 40px;
     display: grid;
@@ -15,34 +20,56 @@ body{
     position: sticky;
     top: 0px;
     font-size: 18px;
-      
+
 }
-.header ul{
+
+.header ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
+    align-items: center !important;
 }
-.header ul li{
+
+.header ul li {
     cursor: pointer;
 }
-.header ul li a{
+
+.header li :hover {
+    color: rgb(8, 122, 222);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.header ul li a {
     text-decoration: none;
     color: black;
 }
-.admin{
-    color: tomato;
+
+.header ul {
+    margin-top: 3px !important;
+    margin-bottom: 5px !important;
+}
+
+.admin {
+    color: white !important;
     font-size: 15px;
     border-color: black;
     border-width: 1px;
     border-style: solid;
     border-radius: 8px;
     background-color: aliceblue;
-    box-shadow: 2px 2px rgb(125, 77, 230);
+    background: rgb(34, 24, 196);
+    background: linear-gradient(90deg, rgba(34, 24, 196, 1) 0%, rgba(101, 96, 206, 1) 7%, rgba(92, 85, 216, 1) 48%, rgba(84, 84, 211, 1) 88%, rgba(43, 43, 185, 1) 96%);
+    padding: 5px;
+    /* box-shadow: 2px 2px rgb(125, 77, 230); */
 }
 
-.course{
+.admin a {
+    color: white !important;
+}
+
+.course {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -52,25 +79,29 @@ body{
     padding: 50px;
     border-radius: 25px;
     gap: 35px;
-    
+
 }
-.course .head{
-    background-color: aliceblue ;
+
+.course .head {
+    background-color: aliceblue;
     max-width: 500px;
     font-size: 25px;
-   
+
 }
-.course .head p{
+
+.course .head p {
     font-size: 17;
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity));
 }
-.course img, .course1 img{
+
+.course img,
+.course1 img {
     max-width: 500px;
     border-radius: 20px;
 }
 
-.reviews{
+.reviews {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,17 +115,19 @@ body{
     text-align: center;
 
 }
-.reviews img{
-    max-width: 50px;
-    border:2px solid white;
-    border-radius: 30px ;
-    
-}
- .reviews h3{
-    white-space: nowrap;
- }
 
-.course1{
+.reviews img {
+    max-width: 50px;
+    border: 2px solid white;
+    border-radius: 30px;
+
+}
+
+.reviews h3 {
+    white-space: nowrap;
+}
+
+.course1 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -105,15 +138,16 @@ body{
     border-radius: 25px;
     gap: 35px;
     font-size: 25px;
-    
+
 }
-.course1 .head p{
+
+.course1 .head p {
     font-size: 25px;
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.comments{
+.comments {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -126,12 +160,97 @@ body{
     border-radius: 12px;
     font-size: 20px;
 }
-.comments img{
+
+.comments img {
     max-width: 80px;
     border-radius: 180px;
-    border:2px solid white;
-    
+    border: 2px solid white;
+
 }
 
+.info {
+    display: flex;
+    flex-direction: column;
+}
 
+.info .profile_img {
+    align-self: center;
+    justify-self: center;
+    width: 95px;
+    border: 2px solid black;
+    border-radius: 80px;
+    margin-top: 15px;
 
+}
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.row img {
+    width: 30px;
+    margin-top: 8px;
+}
+
+.medDisplay {
+    background-color: aliceblue;
+    margin-top: 10px;
+    margin: 10px;
+    border-radius: 12px;
+
+}
+
+.medicines {
+    display: flex;
+    overflow: auto;
+
+}
+
+.boxx {
+    padding: 10px;
+    padding-bottom: 15px;
+
+}
+
+.boxx p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20rem;
+}
+
+.boxx img {
+    border-radius: 25px;
+}
+
+.developer h4 {
+    margin-left: 25px;
+}
+
+.medicines1{
+    min-width: 600px;
+    max-width: 40vw !important;
+    align-self: center !important;
+    background-color: antiquewhite !important;
+    margin: 10px !important;
+    border-radius: 15px !important;
+}
+
+::-webkit-scrollbar {
+    color: black;
+    max-height: 5px;
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ef4444;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fca5a5;
+    border-radius: 2px;
+}

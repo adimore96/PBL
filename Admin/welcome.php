@@ -23,8 +23,9 @@ if ($row > 0) {
 
 //After Submit Form
 if (isset($_POST['submit'])) {
-    echo "Get Request";
+    echo "POST Request";
     $medName = $_POST['medName'];
+    $id = $_SESSION['mobNo'];
     $images = $_FILES['images']['name'];
     $descriptions = $_POST['descriptions'];
     $category = $_POST['category'];
@@ -32,7 +33,7 @@ if (isset($_POST['submit'])) {
 
     $mobNo = $_SESSION["mobNo"];
 
-    $query = "INSERT INTO `$mobNo` ( `medName`, `images`, `descriptions`, `category`, `price`) VALUES ('$medName','$images','$descriptions','$category','$price')";
+    $query = "INSERT INTO `$mobNo` ( `medName`,`id`, `images`, `descriptions`, `category`, `price`) VALUES ('$medName','$id','$images','$descriptions','$category','$price')";
     $result = mysqli_query($conn,$query);
 
     if($result){
@@ -40,9 +41,8 @@ if (isset($_POST['submit'])) {
 
         // Returns the Image name
         echo $_FILES['images']['name'];
-        $target_dir = "Photos/$mobNo";
+        $target_dir = "Photos/";
         $target_file = $target_dir . basename($_FILES["images"]["name"]);
-
         //Image Moved Successfully
         move_uploaded_file($_FILES["images"]["tmp_name"], $target_file);
     }
@@ -76,6 +76,9 @@ if (isset($_POST['submit'])) {
         <ul>
             <li style="color: crimson;">
                 Home
+            </li>
+            <li>
+            <a href="medicines.php">   Medicines </a>
             </li>
             <li>
                 <a href="logout.php"> Logout </a>
@@ -127,6 +130,7 @@ if (isset($_POST['submit'])) {
                     <option selected disabled value="">Choose...</option>
                     <option>Capsules</option>
                     <option>Drops</option>
+                    <option>Gel</option>
                     <option>Inhalers</option>
                     <option>Injections</option>
                 </select>

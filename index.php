@@ -18,19 +18,19 @@
     <div class="header">
         <ul>
             <li style="color: crimson;">
-                Home
+            <a href="#" style="color: crimson;">   Home  </a>
             </li>
             <li>
-                Search Medicine
+            <a href="search_med.php">   Search Medicine </a>
             </li>
             <li>
-                <a href="about_us.html"> About Us </a>
+                <a href="develop_by.html"> Developed By </a>
             </li>
             <li>
-                Contact Us
+            <a href="develop_by.html"> Report Bug </a>
             </li>
             <li class="admin">
-                <a href="Admin/login.php">  Store_Login </a>
+                <a href="Admin/login.php" style="color: white;">  Store_Login </a>
             </li>
         </ul>
     </div>
